@@ -1,0 +1,37 @@
+###
+GET http://localhost:3001/api/vpn_passes
+
+###
+POST http://localhost:3001/api/esb/notify
+Content-Type: application/json
+
+{
+  "message": "GUIDE_UPDATED",
+  "guide": 278,
+  "new_revision": 1
+}
+
+###
+GET http://localhost:3001/api/vpn_exclusions
+  ?type=alwaysEnabled
+
+###
+POST http://localhost:3001/api/vpn_exclusions
+Content-Type: application/json
+
+{
+  "login": "s.voytin",
+  "name": "Сергей Войтин",
+  "type": "alwaysDisabled",
+  "reason": "test",
+  "company": "66f3d29a02fdbe09ffc450d4"
+}
+
+###
+GET http://localhost:3001/api/companies
+
+###
+GET http://localhost:3001/api/ad_users/s.voytin
+
+
+

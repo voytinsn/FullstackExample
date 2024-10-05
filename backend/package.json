@@ -1,0 +1,49 @@
+{
+  "name": "osa_servitor_backend",
+  "version": "0.1.0",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "dev": "cross-env NODE_ENV=development ts-node-dev ./src/index.ts",
+    "dev:demo": "cross-env NODE_ENV=demo ts-node-dev ./src/index.ts",
+    "demo": "cross-env NODE_ENV=demo node ./build/index.js",
+    "start": "cross-env NODE_ENV=production node ./build/index.js"
+  },
+  "author": "voytinsn",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/ldap-authentication": "^2.2.3",
+    "@types/morgan": "^1.9.9",
+    "@types/nodemailer": "^6.4.16",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "3.3.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.5.0"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.15.0",
+    "@sentry/node": "^8.32.0",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "ldap-authentication": "^3.2.4",
+    "moment": "^2.30.1",
+    "mongoose": "^8.6.2",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.15",
+    "zod": "^3.23.8"
+  }
+}

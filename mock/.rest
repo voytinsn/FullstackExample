@@ -1,0 +1,25 @@
+### VPN passes
+GET http://127.0.0.1:3312/api/esb/guide278/changes?from_revision=1
+
+### Companies
+GET http://127.0.0.1:3312/api/esb/guide9/changes?from_revision=1
+
+### Employee
+GET http://127.0.0.1:3312/api/esb/guide1/3
+
+### AD user
+GET http://127.0.0.1:3312/api/ad/users/i.ivanov
+
+### VPN group members
+GET http://127.0.0.1:3312/api/ad/VpnGroupMembers
+
+### Add VPN group member
+POST http://127.0.0.1:3312/api/ad/VpnGroupMembers
+Content-Type: application/json
+
+{
+    "login": "i.ivanov"
+}
+
+### Delete VPN group member
+DELETE http://127.0.0.1:3312/api/ad/VpnGroupMembers/i.ivanov

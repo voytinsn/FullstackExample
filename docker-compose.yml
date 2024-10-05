@@ -1,0 +1,25 @@
+name: osa_servitor
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    working_dir: /var/www/app
+    env_file: "backend/.env"
+    depends_on:
+      mongo:
+        condition: service_started
+    ports:
+      - "3001:3001"
+
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    env_file: "backend/.env"
+    expose:
+      - "27017"
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-db:
